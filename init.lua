@@ -19,7 +19,8 @@ skins = {
 	id = 1,
 	file = minetest.get_worldpath() .. "/simple_skins.mt",
 	preview = minetest.settings:get_bool("simple_skins_preview"),
-	translate = S
+	translate = S,
+	skin_limit = tonumber(minetest.settings:get("simple_skins_limit")) or 300
 }
 
 
@@ -41,7 +42,7 @@ end
 -- load skin list and metadata
 local f, data, skin = 1
 
-while true do
+while skins.id <= skins.skin_limit do
 
 	skin = "character_" .. skins.id
 
@@ -69,8 +70,8 @@ while true do
 
 	-- add metadata to list
 	skins.meta[skin] = {
-		name = data and data.name or "",
-		author = data and data.author or ""
+		name = data and data.name and data.name:gsub("[%p%c]", "") or "",
+		author = data and data.author and data.author:gsub("[%p%c]", "") or ""
 	}
 
 	skins.id = skins.id + 1

@@ -7,6 +7,7 @@ https://forum.minetest.net/viewtopic.php?id=9100
 
 Change log:
 
+- 1.0 - Added skin_limit setting to limit skins loaded, sanitized skin description
 - 0.9 - Added Unified Inventory support (thanks Opvolger)
 - 0.8 - Added player model preview when viewing formspec (Minetest 5.4 dev only)
 - 0.7 - Add some error checks, improve /setskin and tweak & tidy code
