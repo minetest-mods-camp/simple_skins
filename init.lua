@@ -267,4 +267,4 @@ minetest.register_chatcommand("setskin", {
 })
 
 
-print (S("[MOD] Simple Skins loaded"))
+print ("[MOD] Simple Skins loaded")
