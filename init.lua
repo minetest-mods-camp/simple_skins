@@ -97,6 +97,8 @@ if data and data ~= "" then
 	end
 end
 
+-- check for minetest 5.4 compatibility
+local is_54 = minetest.has_feature("direct_velocity_on_players")
 
 -- create formspec for skin selection page
 skins.formspec.main = function(name)
@@ -139,7 +141,7 @@ skins.formspec.main = function(name)
 	end
 
 	-- if preview enabled then add player model to formspec (5.4dev only)
-	if skins.preview == true then
+	if skins.preview == true and is_54 then
 
 		formspec = formspec .. "model[6,-0.2;1.5,3;player;character.b3d;"
 			.. skins.skins[name] .. ".png;0,180;false;true]"
