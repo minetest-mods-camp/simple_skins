@@ -97,8 +97,11 @@ if data and data ~= "" then
 	end
 end
 
--- check for minetest 5.4 compatibility
+
+-- check for minetest 5.x compatibility
 local is_54 = minetest.has_feature("direct_velocity_on_players")
+local is_50 = minetest.has_feature("object_use_texture_alpha")
+
 
 -- create formspec for skin selection page
 skins.formspec.main = function(name)
@@ -202,9 +205,14 @@ skins.event_CHG = function(event, player)
 
 	skins.update_player_skin(player)
 
-	local meta = player:get_meta()
+	if is_50 then
 
-	meta:set_string("simple_skins:skin", skins.skins[name])
+		local meta = player:get_meta()
+
+		meta:set_string("simple_skins:skin", skins.skins[name])
+	else
+		player:set_attribute("simple_skins:skin", skins.skins[name])
+	end
 end
 
 
@@ -212,8 +220,16 @@ end
 minetest.register_on_joinplayer(function(player)
 
 	local name = player:get_player_name() ; if not name then return end
-	local meta = player:get_meta()
-	local skin = meta:get_string("simple_skins:skin")
+	local skin
+
+	if is_50 then
+
+		local meta = player:get_meta()
+
+		skin = meta:get_string("simple_skins:skin")
+	else
+		skin = player:get_attribute("simple_skins:skins")
+	end
 
 	-- do we already have a skin in player attributes?
 	if skin and skin ~= "" then
@@ -256,9 +272,14 @@ minetest.register_chatcommand("setskin", {
 
 		skins.update_player_skin(player)
 
-		local meta = player:get_meta()
+		if is_50 then
 
-		meta:set_string("simple_skins:skin", skins.skins[playername])
+			local meta = player:get_meta()
+
+			meta:set_string("simple_skins:skin", skins.skins[playername])
+		else
+			player:set_attribute("simple_skins:skin", skins.skins[playername])
+		end
 
 		minetest.chat_send_player(playername,
 				S("Your skin has been set to") .. " character_" .. skin)
