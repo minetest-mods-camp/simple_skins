@@ -208,7 +208,7 @@ skins.update_player_skin = function(player)
 
 	local name = player:get_player_name()
 
-	if is_50 then
+	if minetest.get_modpath("player_api") then
 		player_api.set_textures(player, {skins.skins[name] .. ".png"})
 	else
 		default.player_set_textures(player, {skins.skins[name] .. ".png"})
