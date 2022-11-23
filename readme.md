@@ -13,7 +13,7 @@ Must be named `simple_skins` and uses SfInv or Inventory Plus mods,
 and Unified Inventory if you use lasted original (master branch)
 version when available to allow players to select a skin/texture from the list.
 
-![screenshot.png](screenshot.png)
+![screenshot.jpg](screenshot.jpg)
 
 Original forum https://forum.minetest.net/viewtopic.php?id=9100
 
@@ -76,6 +76,7 @@ Change log:
 
 Change log:
 
+- 1.01- Replace all unlicensed skins with CC0 one's (many thanks isaiah658)
 - 1.0 - Added skin_limit setting to limit skins loaded, sanitized skin description
 - 0.9 - Added Unified Inventory support (thanks Opvolger)
 - 0.8 - Added player model preview when viewing formspec (Minetest 5.4 dev only)
