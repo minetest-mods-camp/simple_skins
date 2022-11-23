@@ -1,2 +1,2 @@
-name = "Tuxedo Sam",
-author = "Jordach",
+name = "Split",
+author = "isaiah658",

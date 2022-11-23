@@ -1,3 +1,18 @@
+License of Media:
+-----------------
+
+Title: Minetest Skins Pack 1
+Title URL: https://opengameart.org/content/minetest-skins-pack-1
+Author: isaiah658
+License(s): License(s): CC0 ( http://creativecommons.org/publicdomain/zero/1.0/legalcode )
+Original file names: Skin_1.png to Skin_32.png and Icon.png
+Simple Skins file names: character_1.png to character_31.png, character_900.png, and inventory_plus_skins.png
+Modifications: None
+
+
+License of Code:
+----------------
+
 The MIT License (MIT)
 
 Copyright (c) 2016 TenPlus1
@@ -19,6 +34,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-
-character_900.png is called Deep Cake 2 by okkedbouwer on minecraftskins.com

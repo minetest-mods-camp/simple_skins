@@ -1,2 +1,2 @@
-name = "Slenderman",
-author = "prof_turbo",
+name = "Lab Coat",
+author = "isaiah658",

@@ -1,2 +1,2 @@
-name = "Sepia Sam",
-author = "Hybrid Dog",
+name = "Derp Dirt",
+author = "isaiah658",
